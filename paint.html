@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Paint Demo</title>
+<link rel='stylesheet' type='text/css' href='paint.css'>
+</head>
+<body>
+<div class="paint-div">
+	<div class="paint-tools">
+		Brush Color
+		<span class="paint-tool">
+			<select class="paint-color-select">
+				<option value="#000000" selected="selected">Black</option>
+				<option value="#ff0000">Red</option>
+				<option value="#ff8800">Orange</option>
+				<option value="#ffff00">Yellow</option>
+				<option value="#00ff00">Green</option>
+				<option value="#0000ff">Blue</option>
+				<option value="#ff00ff">Purple</option>
+				<option value="#ffffff">White</option>
+			</select>
+		</span>
+		<span class="paint-tool">
+			Line Thickness
+			<select class="paint-thickness-select">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+				<option value="8">8</option>
+				<option values="12">12</option>
+				<option values="16">16</option>
+				<option values="20">20</option>
+				<option values="30">30</option>
+			</select>
+		</span>
+		<input type="button" value="Undo" class="paint-tool paint-undo-button">
+		<input type="button" value="Redo" class="paint-tool paint-redo-button">
+		<input type="button" value="Clear" class="paint-tool paint-clear-button">
+	</div>
+	<canvas class="paint-canvas" width="750" height="500"></canvas>
+</div>
+<!-- since nothing else is depending on it, let's load this script async -->
+<script src='paint.js' async></script>
+</body>
+</html>
+
+<!-- Possible improvements:
+	* Add a "loading" gif that shows until the paint.js is loaded
+	* Add an export button that creates an image download
+	* Make the color selection into a color wheel instead of a list
+	* Make the line thickness into a number input
+-->
